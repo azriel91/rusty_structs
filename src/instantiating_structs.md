@@ -6,8 +6,8 @@
     struct UnitStruct;
 
     fn main() {
-        let _ = UnitStruct;
-    #
+        let var = UnitStruct;
+    #   //
     #   println!("Result: Ok!");
     }
     ```
@@ -17,7 +17,7 @@
     ```rust
     # #[derive(Debug, PartialEq)]
     # struct UnitStruct;
-    #
+    # //
     struct TupleStruct(u32, UnitStruct);
     type Unnamed = (u32, UnitStruct);
 
@@ -33,7 +33,7 @@
 
         assert_eq!(unnamed_tuple.0, 1);
         assert_eq!(unnamed_tuple.1, UnitStruct);
-    #
+    #   //
     #   println!("Result: Ok!");
     }
     ```
@@ -42,7 +42,7 @@
 
     ```rust
     # struct UnitStruct;
-    #
+    # //
     struct NamedStruct {
         pub pub_field: u32,
         private_field: UnitStruct,
@@ -55,7 +55,7 @@
         };
 
         assert_eq!(named_struct.pub_field, 1);
-    #
+    #   //
     #   println!("Result: Ok!");
     }
     ```

@@ -49,32 +49,32 @@ fn main() {
 
 ```rust
 # use std::time::Duration;
-#
+# //
 # trait DurationExt {
 #     fn secs(self) -> Duration;
 #     fn mins(self) -> Duration;
 # }
-#
+# //
 # trait HumanDate {
 #     fn readable(&self) -> String;
 # }
-#
+# //
 # impl DurationExt for u64 {
 #     fn secs(self) -> Duration { Duration::new(self, 0) }
 #     fn mins(self) -> Duration { Duration::new(self * 60, 0) }
 # }
-#
+# //
 # impl HumanDate for Duration {
 #     fn readable(&self) -> String {
 #         let mut buffer = String::with_capacity(256);
 #         let total_seconds = self.as_secs();
 #         let minutes = total_seconds / 60;
 #         let seconds = total_seconds % 60;
-#
+# //
 #         format!("{} minutes {} seconds", minutes, seconds)
 #     }
 # }
-#
+# //
 fn main() {
     let duration = 45.secs() + 37.secs() + 2.mins();
     println!("{}", duration.readable());

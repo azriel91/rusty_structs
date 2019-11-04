@@ -2,7 +2,7 @@
 
 ```rust
 # struct UnitStruct;
-#
+# //
 struct NamedStruct {
     pub pub_field: u32,
     private_field: UnitStruct,
@@ -14,7 +14,7 @@ struct NamedStruct {
 
 ```rust
 # struct UnitStruct;
-#
+# //
 # struct NamedStruct {
 #     pub pub_field: u32,
 #     private_field: UnitStruct,
@@ -35,7 +35,7 @@ impl NamedStruct {
         # //     private_field: UnitStruct,
         # // };
         # // return named_struct;
-        #
+        # //
         NamedStruct {
             pub_field,
             private_field: UnitStruct,
@@ -60,12 +60,12 @@ impl NamedStruct {
 
 ```rust
 # struct UnitStruct;
-#
+# //
 # struct NamedStruct {
 #     pub pub_field: u32,
 #     private_field: UnitStruct,
 # }
-#
+# //
 impl NamedStruct {
     // ..
 
@@ -83,7 +83,7 @@ impl NamedStruct {
     // * Preventing use of a variable, e.g. `stream.close()`.
     // * Builder pattern, e.g. `struct_builder.build()`.
     pub fn consume_self(self) {}
-#
+# //
 #     fn private_function() -> u32 {
 #         3
 #     }
@@ -95,12 +95,12 @@ impl NamedStruct {
 
 ```rust
 # struct UnitStruct;
-#
+# //
 # struct NamedStruct {
 #     pub pub_field: u32,
 #     private_field: UnitStruct,
 # }
-#
+# //
 # impl NamedStruct {
 #     pub fn new() -> Self {
 #         NamedStruct {
@@ -108,30 +108,30 @@ impl NamedStruct {
 #             private_field: UnitStruct,
 #         }
 #     }
-#
+# //
 #     pub fn new_with_value(pub_field: u32) -> Self {
 #         NamedStruct {
 #             pub_field,
 #             private_field: UnitStruct,
 #         }
 #     }
-#
+# //
 #     pub fn method_immutable(&self) -> u32 {
 #         // self.pub_field = 3; // Error: trying to mutate `self` which is immutable.
 #         self.pub_field
 #     }
-#
+# //
 #     pub fn method_mutable(&mut self) {
 #         self.pub_field = Self::private_function();
 #     }
-#
+# //
 #     pub fn consume_self(self) {}
-#
+# //
 #     fn private_function() -> u32 {
 #         3
 #     }
 # }
-#
+# //
 # fn main() {
 let named_struct = NamedStruct::new();
 assert_eq!(named_struct.method_immutable(), 123);

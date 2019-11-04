@@ -7,3 +7,4 @@ title = "Rusty Structs"
 
 [output.html.playpen]
 editable = true
+line-numbers = true

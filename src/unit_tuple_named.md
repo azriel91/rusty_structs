@@ -13,7 +13,7 @@ There are 3 kinds of `struct`s:
 
     ```rust
     # struct UnitStruct;
-    #
+    # //
     // Fields have no names:
     struct TupleStruct(u32, UnitStruct);
 
@@ -55,7 +55,7 @@ There are 3 kinds of `struct`s:
 
     ```rust
     # struct UnitStruct;
-    #
+    # //
     struct NamedStruct {
         pub pub_field: u32,
         private_field: UnitStruct,
