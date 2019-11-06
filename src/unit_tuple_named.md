@@ -22,6 +22,7 @@ There are 3 kinds of `struct`s:
 
     // Unnamed tuple:
     type Unnamed = (u32, UnitStruct);
+    type Alias2 = (u32, UnitStruct);
     ```
 
     <details>
@@ -41,6 +42,12 @@ There are 3 kinds of `struct`s:
 
         ```rust
         let numbers = vec![10, 23, 34];
+        numbers
+            .iter()
+            .for_each(|number| println!("{}", number));
+
+        println!();
+
         numbers
             .iter()
             .enumerate()

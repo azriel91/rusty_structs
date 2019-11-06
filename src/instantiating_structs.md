@@ -27,6 +27,10 @@
         assert_eq!(named_tuple.0, 1);
         assert_eq!(named_tuple.1, UnitStruct);
 
+        // Cannot iterate over tuple indices
+        // i.e. you cannot do this:
+        // (0..2).for_each(|n| println!("{:?}", named_tuple.n));
+
         // ---
 
         let unnamed_tuple = (1, UnitStruct);

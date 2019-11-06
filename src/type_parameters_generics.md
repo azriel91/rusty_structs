@@ -36,9 +36,10 @@ impl<T> NamedStruct<T> {
 }
 
 fn main() {
-    let _: TupleStruct<u32> = TupleStruct(1);
-    let _: TupleStruct<_> = TupleStruct(true);
-    let _ = TupleStruct(TupleStruct(1));
+    // Rust has type inference
+    let _: TupleStruct<u32> = TupleStruct(1);  // No inference.
+    let _: TupleStruct<_> = TupleStruct(true); // Infer inner parameter.
+    let _ = TupleStruct(TupleStruct(1));       // Infer full type.
 
     let _ = NamedStruct { t: TupleStruct(1) };
 }
