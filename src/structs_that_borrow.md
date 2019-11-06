@@ -1,6 +1,6 @@
 # Structs that Borrow
 
-```rust,editable
+```rust,ignore,editable
 struct Book {
     title: String,
 }

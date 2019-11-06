@@ -50,7 +50,7 @@ impl NamedStruct {
 }
 
 # fn main() {
-#     let _named_struct = NamedStruct::new(1);
+#     let _named_struct = NamedStruct::new();
 # }
 ```
 </details>

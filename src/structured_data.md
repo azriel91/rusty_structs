@@ -7,7 +7,7 @@ In Rust, the grouping of data types into a higher level abstraction is called a 
 * ☕ Java: `class`
 * ©️ C/C++: `struct`, `class`
 
-```rust
+```rust,ignore
 pub struct Name {
     field: Type
 }

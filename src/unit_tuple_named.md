@@ -11,7 +11,7 @@ There are 3 kinds of `struct`s:
 
 * Tuple
 
-    ```rust
+    ```rust,ignore
     # struct UnitStruct;
     # //
     // Fields have no names:
